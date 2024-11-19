@@ -1,0 +1,23 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  .slanted-box {
+    width: 2000px;
+    height: 150px;
+    background-color: #e5e5e5;
+    color: #333;
+    text-align: center;
+    line-height: 150px;
+    font-size: 24px;
+    font-weight: bold;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
