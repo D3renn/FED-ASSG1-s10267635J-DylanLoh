@@ -104,6 +104,7 @@ html, body {
     height: auto;
     object-fit: cover;
 }
+
 @media (max-width: 768px) {
     .promo-section {
         flex-direction: column; 
@@ -111,7 +112,106 @@ html, body {
     }
 
     .promo-card {
-        align-self: auto; 
+        align-self: center; 
         height: auto; 
     }
 }
+body {
+    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #000;
+  }
+  
+  .tour-dates {
+    padding: 50px 20px;
+    background-color: #fff;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .section-header .view-all {
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .section-header .view-all:hover {
+    text-decoration: underline;
+  }
+  
+  /* Grid Layout */
+  .tour-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .tour-card {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tour-card .date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tour-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .tour-card .venue {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .tour-card .link {
+    display: block;
+    font-size: 1rem;
+    color: #ff4500;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .tour-card .link:hover {
+    text-decoration: underline;
+  }
+  
+  .tour-card .sold-out {
+    font-size: 1rem;
+    color: #ff0000;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .tour-card {
+      flex: 1 1 calc(100% - 20px); /* Single column on smaller screens */
+    }
+  }
+
+  
+
+
