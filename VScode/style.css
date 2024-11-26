@@ -537,6 +537,8 @@ body {
     font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
 }
 
 .grid-item p {
@@ -548,6 +550,10 @@ body {
     cursor: pointer;
 }
 
+.grid-item a {
+    color: #000;
+    text-decoration: none;
+}
 /* Dropdown     Styles */
 .dropdown {
     position: absolute;
@@ -609,4 +615,54 @@ body {
 
 .booking-container button:hover {
     background-color: #333;
+}
+
+/* Responsive Design */
+
+/* media.html */
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 100px 0;
+    margin: 0 auto 24px auto;
+    position: absolute;
+    top: 0;
+    width: 80%; 
+}
+
+.nav-item2 {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+  }
+  
+  .nav-item2 a {
+    color: white;
+    text-decoration: none;
+  }
+
+.nav-item2.logo img {
+    height: 150px;
+    
+}
+
+.hero-section2 {
+    position: relative;
+    height: 100vh;
+    background: url("https://cdn.media.amplience.net/i/metallica/media_hero?fmt=auto&amp;w=auto") center center/cover no-repeat;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white;
+    text-align: center; /* Center text alignment */
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section2 h1 {
+    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+    color: #fff; /* Ensure the text color contrasts with the background */
+    letter-spacing: 0.5px;
+    margin: 0; /* Remove extra margin */
+    padding: 0; /* Remove padding */
 }
