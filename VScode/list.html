@@ -8,8 +8,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <section class="hero-section1">
-        <div class="navbar">
+    <section class="navbar">
         <div class="nav-item-list">
             <a href="index.html">
               <i class="fa fa-list"></i>
@@ -18,4 +17,27 @@
           <div class="nav-item logo"><img src="https://1.bp.blogspot.com/-EtGRERcqiYs/XHC6oG1DIlI/AAAAAAAASBo/6Z4_953B0gEBOkxUkdGqitjZuMMVu4V5gCLcBGAs/s1600/Mettalica%2BV1.png" alt="Metallica Logo"></div>
           <div class="nav-item-list"><i class="fa fa-shopping-cart"></i></div>
       </div>
-        <div class
+    </section>
+    
+    <section class="nav-item-search">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search..." 
+          onkeyup="filterDropdown()"
+          onclick="showDropdown()"
+        />
+        <div id="dropdown" class="dropdown">
+          <!-- Options -->
+          <div class="dropdown-item">Metallica T-Shirt</div>
+          <div class="dropdown-item">Logo Pullover Hoodie</div>
+          <div class="dropdown-item">72 Seasons Vinyl (2LP)</div>
+          <div class="dropdown-item">Concert Tickets</div>
+          <div class="dropdown-item">Limited Edition Poster</div>
+          <div class="dropdown-item">Metallica Mug</div>
+          <div class="dropdown-item">Metallica Guitar Picks</div>
+        </div>
+    </section>
+
+</body>
+
