@@ -1,5 +1,5 @@
-      // Function to filter dropdown items
-      function filterDropdown() {
+
+    function filterDropdown() {
         const input = document.getElementById("searchInput").value.toLowerCase();
         const dropdown = document.getElementById("dropdown");
         const items = dropdown.querySelectorAll(".dropdown-item");
