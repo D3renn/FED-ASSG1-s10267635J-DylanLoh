@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 100px 0;
+    margin: 0 auto 24px auto;
+    position: absolute;
+    top: 0;
+    width: 80%; 
+}
+
+.nav-item2 {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+  }
+  
+  .nav-item2 a {
+    color: white;
+    text-decoration: none;
+  }
+
+.nav-item2.logo img {
+    height: 150px;
+    
+}
+
+.hero-section2 {
+    position: relative;
+    height: 100vh;
+    background: url("https://cdn.media.amplience.net/i/metallica/media_hero?fmt=auto&amp;w=auto") center center/cover no-repeat;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white;
+    text-align: center; /* Center text alignment */
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section2 h1 {
+    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+    color: #fff; /* Ensure the text color contrasts with the background */
+    letter-spacing: 0.5px;
+    margin: 0; /* Remove extra margin */
+    padding: 0; /* Remove padding */
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+    justify-items: center; /* Center items horizontally */
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+.photo-card {
+    width: 100%; /* Make cards responsive to grid */
+    max-width: 500px; /* Limit max width of cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.photo-card img {
+    width: 100%;
+    display: block;
+}
+
+.photo-card .photo-info {
+    padding: 10px;
+}
+
+.photo-card .photo-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.photo-card .photo-info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.photo-gallery h1 {
+    font: 800 36px / 1.2 "Arial", sans-serif; /* Bold and larger font */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #000;
+    text-align: left; /* Align text to the left */
+    border-bottom: 2px solid #ccc; /* Add a bottom border for separation */
+    padding-bottom: 10px;
+    margin: 20px;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between; /* Align categories to the left and sort to the right */
+    align-items: center;
+    border-bottom: 1px solid #ccc; /* Add a border below for separation */
+    padding-bottom: 10px;
+    margin: 20px;
+}
+
+.categories {
+    display: flex;
+    gap: 20px; /* Add spacing between buttons */
+}
+
+.filter-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #000;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent; /* Default no underline */
+    transition: all 0.3s;
+}
+
+.filter-button:hover {
+    color: #ff4500; /* Change color on hover */
+    border-bottom: 2px solid #ff4500; /* Underline on hover */
+}
+
+.filter-button.active {
+    color: #000;
+    border-bottom: 2px solid #000; /* Permanent underline for active button */
+}
+
+.sort-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-bar label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.sort-bar select {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left on smaller screens */
+    }
+
+    .sort-bar {
+        margin-top: 10px; /* Add space for the sort dropdown */
+    }
+}

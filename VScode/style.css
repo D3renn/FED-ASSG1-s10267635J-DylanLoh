@@ -27,7 +27,7 @@
 .hero-section {
     position: relative;
     height: 100vh;
-    background: url("FED-ASSG1-s10267635J-DylanLoh/images/M72-2025_carousel.jpg") center center/cover no-repeat;
+    background-image: url("FED-ASSG1-s10267635J-DylanLoh/images/M72-2025_carousel.jpg") center center/cover no-repeat;
     display: flex;
     align-items: flex-end;
     justify-content: end;
