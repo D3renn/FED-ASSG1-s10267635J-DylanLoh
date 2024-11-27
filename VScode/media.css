@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 100px 0;
+    margin: 0 auto 24px auto;
+    position: absolute;
+    top: 0;
+    width: 80%; 
+}
+
+.nav-item2 {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+  }
+  
+  .nav-item2 a {
+    color: white;
+    text-decoration: none;
+  }
+
+.nav-item2.logo img {
+    height: 150px;
+    
+}
+
+.hero-section2 {
+    position: relative;
+    height: 100vh;
+    background: url("https://cdn.media.amplience.net/i/metallica/media_hero?fmt=auto&amp;w=auto") center center/cover no-repeat;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white;
+    text-align: center; /* Center text alignment */
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section2 h1 {
+    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+    color: #fff; /* Ensure the text color contrasts with the background */
+    letter-spacing: 0.5px;
+    margin: 0; /* Remove extra margin */
+    padding: 0; /* Remove padding */
+}
+
+.grid1 {
+    width: 100%;
+    max-width: 1276px;
+    margin: 0 auto; 
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.grid1 h1 {
+    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+    color: #000;
+    letter-spacing: 2px;
+    margin: 0;
+    color: inherit;
+    margin-top: 100px;
+    margin-left: 80px;
+    font-size: 2.5rem;
+}
+.promo-section {
+    display: flex; 
+    gap: 5px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.photo-card {
+    flex: 1; 
+    max-width: 500px; 
+    padding: 10px;
+    padding-bottom: 100px;
+
+
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    object-fit:contain;
+}
+
+.video-card {
+    flex: 1; 
+    max-width: 500px; 
+    padding-top: 100px;
+
+}
+
+.video-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  
+}
+

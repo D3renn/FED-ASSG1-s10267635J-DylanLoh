@@ -1,0 +1,164 @@
+body {
+    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+  }
+  .navbar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 100px 0;
+    margin: 0 auto 24px auto;
+    position: absolute;
+    top: 0;
+    width: 80%; 
+}
+
+.nav-item1 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+  }
+  
+  .nav-item1 a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+.nav-item1.logo img {
+    height: 150px;
+    
+}
+
+.hero-section1 {
+    position: relative;
+    height: 25vh;  
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+/* Search Bar */
+.nav-item-search {
+    display: flex;
+    align-items: center;
+    padding: 100px 60px 20px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    letter-spacing: 1.0px;
+
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 10px;
+    color: #000;
+    letter-spacing: 1.0px;
+}
+/* Grid Layout */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 50px; /* Added space between the grid and the search bar */
+}
+
+.grid-item {
+    text-align: center;
+    font-size: 18px;
+}
+
+.grid-item h3 {
+    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.grid-item p {
+    color: #666;
+}
+
+.grid-item h3:hover {
+    text-decoration:underline; 
+    cursor: pointer;
+}
+
+.grid-item a {
+    color: #000;
+    text-decoration: none;
+}
+/* Dropdown     Styles */
+.dropdown {
+    position: absolute;
+    background: #fff;
+    margin-top: 220px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto; /* Add scroll if needed */
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.dropdown-item {
+    padding: 10px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+/* Booking Section */
+.booking-section {  
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.booking-container {
+    display: inline-block;
+    background: #acacac;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.booking-container h4 {
+    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+    margin-bottom: 5px;
+    font-size: 4rem;
+}
+
+.booking-container p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.booking-container button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.booking-container button:hover {
+    background-color: #333;
+}
+
+/* Responsive Design */
