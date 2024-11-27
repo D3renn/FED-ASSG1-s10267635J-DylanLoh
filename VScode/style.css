@@ -27,7 +27,7 @@
 .hero-section {
     position: relative;
     height: 100vh;
-    background: url("https://cdn.media.amplience.net/i/metallica/M72-2025_carousel?fmt=auto&w=auto") center center/cover no-repeat;
+    background: url("M72-2025_carousel.jpg") center center/cover no-repeat;
     display: flex;
     align-items: flex-end;
     justify-content: end;
