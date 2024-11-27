@@ -57,7 +57,7 @@ body {
     gap: 20px; /* Space between grid items */
     margin-top: 20px;
     justify-items: center; /* Center items horizontally */
-    padding: 0 20px; /* Add padding to the sides */
+    
 }
 
 .photo-card {
