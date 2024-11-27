@@ -55,7 +55,7 @@ body {
     width: 100%;
     max-width: 1276px;
     margin: 0 auto; 
-    padding: 0 15px;
+    padding: 0 20px 50px; /* Add padding to the sides */
     box-sizing: border-box;
 }
 
@@ -69,48 +69,84 @@ body {
     margin-left: 80px;
     font-size: 2.5rem;
 }
+
 .promo-section {
     display: flex; 
-    gap: 5px;
+    gap: 20px; /* Space between the cards */
     justify-content: center;
     margin-top: 18px;
+    align-items: flex-start; /* Aligns the top of the photo and video cards */
 }
 
-.promo-section h2 {
-    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
-    color: #000;
-    letter-spacing: 2px;
-    color: inherit;
-    font-size: 2.5rem;
+.photo-card,
+.video-card {
+    flex: 1;
+    max-width: 500px;
+    height: 600px; /* Set height for the cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Text color for contrast */
+    font: 800 24px / 1.2 "futura-pt-bold", sans-serif;
+    background-size: cover; /* Ensures the background covers the card */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents background from repeating */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
 }
+
 
 .photo-card {
-    flex: 1; 
-    max-width: 500px; 
-    padding: 10px;
-    padding-bottom: 100px;
-
-
-}
-
-.photo-card img {
-    width: 100%;
-    height: auto;
-    object-fit:contain;
+    background-image: url("https://cdn.media.amplience.net/i/metallica/photos_card?fmt=auto");
 }
 
 .video-card {
-    flex: 1; 
-    max-width: 500px; 
-    padding-top: 100px;
-
+    background-image: url("https://cdn.media.amplience.net/i/metallica/videos_card?fmt=auto");
+    margin-top: 50px; /* Push the video card slightly below */
 }
 
-.video-card img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  
+.metallica-footer {
+    background-color: #000; /* Black background */
+    color: white; /* White text */
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.metallica-footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.metallica-footer .footer-logo img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.metallica-footer .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between links */
+    margin-bottom: 20px;
+}
+
+.metallica-footer .footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.metallica-footer .footer-nav a:hover {
+    color: #ff4500; /* Orange hover effect */
+}
+
+.metallica-footer .footer-copyright {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #aaa; /* Lighter gray for copyright text */
 }
 
 

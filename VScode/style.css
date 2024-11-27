@@ -27,7 +27,7 @@
 .hero-section {
     position: relative;
     height: 100vh;
-    background: url("M72-2025_carousel.jpg") center center/cover no-repeat;
+    background: url("FED-ASSG1-s10267635J-DylanLoh/images/M72-2025_carousel.jpg") center center/cover no-repeat;
     display: flex;
     align-items: flex-end;
     justify-content: end;
@@ -348,6 +348,7 @@ body {
     scroll-behavior: smooth; /* Smooth scrolling effect */
     padding: 20px 0; /* Optional: Adds padding to the scrolling area */
     margin-left: 6rem;
+    margin-bottom: 2rem;
   }
   
   .product-grid-scroll::-webkit-scrollbar {
@@ -357,10 +358,12 @@ body {
   .product-grid-scroll::-webkit-scrollbar-thumb {
     background-color: #aaa;
     border-radius: 4px;
+    padding-bottom: 50px;
   }
   
   .product-grid-scroll::-webkit-scrollbar-track {
     background-color: #f7f7f7;
+
   }
   
   /* Product Card */
@@ -453,3 +456,49 @@ body {
   .product-details .new-price {
     color: #ff4500;
   }
+
+  .metallica-footer {
+    background-color: #000; /* Black background */
+    color: white; /* White text */
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.metallica-footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.metallica-footer .footer-logo img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.metallica-footer .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between links */
+    margin-bottom: 20px;
+}
+
+.metallica-footer .footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.metallica-footer .footer-nav a:hover {
+    color: #ff4500; /* Orange hover effect */
+}
+
+.metallica-footer .footer-copyright {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #aaa; /* Lighter gray for copyright text */
+}
+
+
