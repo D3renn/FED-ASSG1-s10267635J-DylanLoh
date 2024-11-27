@@ -88,11 +88,25 @@ body {
     justify-content: center;
     text-align: center;
     color: white; /* Text color for contrast */
-    font: 800 24px / 1.2 "futura-pt-bold", sans-serif;
+    font: 800 30px / 1.05 "futura-pt-bold", sans-serif;
     background-size: cover; /* Ensures the background covers the card */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents background from repeating */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+}
+
+.photo-card:hover,
+.video-card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    transition: transform 0.3s; /* Add a smooth transition */
+    cursor: pointer; /* Change cursor to a pointer when hovering */
+
+}
+
+.photo-card a,
+.video-card a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
 }
 
 
