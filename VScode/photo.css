@@ -92,7 +92,7 @@ body {
 }
 
 .photo-gallery h1 {
-    font: 800 36px / 1.2 "Arial", sans-serif; /* Bold and larger font */
+    font: 800 36px / 1.2 "futura-pt-bold", sans-serif; /* Bold and larger font */
     margin-bottom: 10px;
     text-transform: uppercase;
     color: #000;
@@ -136,7 +136,7 @@ body {
 
 .filter-button.active {
     color: #000;
-    border-bottom: 2px solid #000; /* Permanent underline for active button */
+    border-bottom: 2px solid #000;
 }
 
 .sort-bar {

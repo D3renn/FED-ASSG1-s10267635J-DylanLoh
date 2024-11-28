@@ -22,4 +22,25 @@
         <div class="title2">
             <h1>Video</h1>
         </section>
+        <section class="video-gallery">
+            <h1>Explore Videos...</h1>
+            <div class="filter-bar">
+              <div class="categories">
+                <button class="filter-button active" data-category="all">All</button>
+                <button class="filter-button" data-category="live">Live Performances</button>
+                <button class="filter-button" data-category="interview">Interviews</button>
+                <button class="filter-button" data-category="behind">Behind the Scenes</button>
+              </div>
+              <div class="sort-bar">
+                <label for="video-sort">Sort By:</label>
+                <select id="video-sort">
+                  <option value="newest">Newest to Oldest</option>
+                  <option value="oldest">Oldest to Newest</option>
+                </select>
+              </div>
+            </div>
+            <div class="video-grid" id="videoGrid">
+              <!-- Video cards will be dynamically loaded here -->
+            </div>
+          </section>
 

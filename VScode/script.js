@@ -107,18 +107,19 @@
             renderPhotos(sortedPhotos);
         };
     
-        // Event listeners for filters
-        filterButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                filterPhotos(button.dataset.category);
-            });
-        });
-    
-        // Event listener for sorting
-        sortSelect.addEventListener("change", () => {
-            filterPhotos(document.querySelector(".filter-button.active")?.dataset.category || "all");
-        });
-    
+    // Event listeners for filters
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+          document.querySelector(".filter-button.active").classList.remove("active");
+          button.classList.add("active");
+          filterPhotos(button.dataset.category);
+      });
+  });
+
+  // Event listener for sorting
+  sortSelect.addEventListener("change", () => {
+      filterPhotos(document.querySelector(".filter-button.active")?.dataset.category || "all");
+  });
         // Initial rendering
         renderPhotos(photos);
     });
@@ -137,5 +138,117 @@ const renderPhotos = (filteredPhotos) => {
           </div>
       `;
       photoGrid.innerHTML += photoCard;
+  });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = [
+    {
+      id: 1,
+      category: "live",
+      date: "2024-09-29",
+      title: "Live in Mexico City",
+      thumbnail: "https://via.placeholder.com/300x200?text=Live+Performance+1",
+    },
+    {
+      id: 2,
+      category: "interview",
+      date: "2024-09-25",
+      title: "Exclusive Interview with James",
+      thumbnail: "https://via.placeholder.com/300x200?text=Interview",
+    },
+    {
+      id: 3,
+      category: "behind",
+      date: "2024-09-20",
+      title: "Behind the Scenes: M72 Tour",
+      thumbnail: "https://via.placeholder.com/300x200?text=Behind+the+Scenes",
+    },
+    {
+      id: 4,
+      category: "live",
+      date: "2024-09-15",
+      title: "Live in Paris",
+      thumbnail: "https://via.placeholder.com/300x200?text=Live+Performance+2",
+    },
+    {
+      id: 5,
+      category: "interview",
+      date: "2024-09-10",
+      title: "Exclusive Interview with Sarah",
+      thumbnail: "https://via.placeholder.com/300x200?text=Interview",
+    },
+  ];
+
+  const videoGrid = document.getElementById("videoGrid");
+  const filterButtons = document.querySelectorAll(".video-gallery .filter-button");
+  const sortSelect = document.getElementById("video-sort");
+
+  // Function to render videos
+  const renderVideos = (filteredVideos) => {
+    videoGrid.innerHTML = "";
+    filteredVideos.forEach((video) => {
+      const videoCard = `
+        <div class="video-card">
+          <img src="${video.thumbnail}" alt="${video.title}">
+          <div class="video-info">
+            <p>${video.date}</p>
+            <h3>${video.title}</h3>
+          </div>
+        </div>
+      `;
+      videoGrid.innerHTML += videoCard;
+    });
+  };
+
+  // Function to filter videos
+  const filterVideos = (category) => {
+    let filteredVideos = category === "all" ? videos : videos.filter((video) => video.category === category);
+    sortVideos(filteredVideos, sortSelect.value);
+  };
+
+  // Function to sort videos
+  const sortVideos = (videoArray, sortBy) => {
+    const sortedVideos = videoArray.sort((a, b) => {
+      if (sortBy === "newest") {
+        return new Date(b.date) - new Date(a.date);
+      } else {
+        return new Date(a.date) - new Date(b.date);
+      }
+    });
+    renderVideos(sortedVideos);
+  };
+
+  // Event listeners for filters
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      document.querySelector(".video-gallery .filter-button.active").classList.remove("active");
+      button.classList.add("active");
+      filterVideos(button.dataset.category);
+    });
+  });
+
+  // Event listener for sorting
+  sortSelect.addEventListener("change", () => {
+    const activeCategory = document.querySelector(".video-gallery .filter-button.active").dataset.category;
+    filterVideos(activeCategory);
+  });
+
+  // Initial rendering
+  renderVideos(videos);
+});
+const renderVideos = (filteredVideos) => {
+  videoGrid.innerHTML = ""; // Clear existing videos
+  filteredVideos.forEach((videos) => {
+      const videoCard = `
+          <div class="photo-card">
+              <img src="${videos.image}" alt="${videos.location}">
+              <div class="photo-info">
+                  <p>${videos.date}</p>
+                  <h3>${videos.location}</h3>
+              </div>
+          </div>
+      `;
+      videoGrid.innerHTML += videoCard;
   });
 };
