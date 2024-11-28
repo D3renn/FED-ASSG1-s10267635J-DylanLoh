@@ -6,6 +6,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <title>Band Website</title>
   <link href="style.css" rel="stylesheet" />
+  <script src="script.js"></script>
 </head>
 <body>
   <section class="hero-section">
@@ -16,7 +17,11 @@
         </a>
       </div>
       <div class="nav-item logo"><img src="https://1.bp.blogspot.com/-EtGRERcqiYs/XHC6oG1DIlI/AAAAAAAASBo/6Z4_953B0gEBOkxUkdGqitjZuMMVu4V5gCLcBGAs/s1600/Mettalica%2BV1.png" alt="Metallica Logo"></div>
-      <div class="nav-item"><i class="fa fa-shopping-cart"></i></div>
+      <div class="nav-item">
+        <a href="cart.html">
+          <i class="fa fa-shopping-cart"></i>
+        </a>
+      </div>
   </div>
     <div class="title">
 
@@ -94,17 +99,17 @@
         <img src="2024-10-21-Holiday-Launch-Store-Banner.jpg" srcset="" data-src="" class="merch-cards" alt="Holiday 2024 Merch" loading="lazy">
         <img src="2024-11-18-Classic-Tees-Sale-Store-Banner.jpg" srcset="" data-src="" class="merch-cards" alt="On sale this week!" loading="lazy">
       </div>
-    </section>
-    </section class="merch-store">
-      <div class="section-header">
-        <h2>Met Store</h2>
-        <a href="#" class="view-all">Shop Now</a>
-      </div>
+      <section class="merch-store">
+        <div class="section-header">
+          <h2>Met Store</h2>
+          <a href="cart.html" class="view-all">View Cart</a>
+        </div>
         <div class="product-grid-scroll">
-          <div class="product-card">
+          <!-- Product 1 -->
+          <div class="product-card" data-id="1" data-name="Ride the Lightning T-Shirt" data-price="27.99">
             <div class="product-image">
-              <img src="RTL_Tshirt.jpg" alt="Ride The Lightning T-Shirt, , hi-res">
-              <div class="quick-view">ADD TO CART</div>
+              <img src="RTL_Tshirt.jpg" alt="Ride The Lightning T-Shirt">
+              <div class="quick-view" onclick="addToCart(this)">ADD TO CART</div>
             </div>
             <div class="product-details">
               <span class="badge sale">SALE</span>
@@ -112,10 +117,12 @@
               <p class="price"><span class="old-price">$34.99</span> <span class="new-price">$27.99</span></p>
             </div>
           </div>
-          <div class="product-card">
+      
+          <!-- Product 2 -->
+          <div class="product-card" data-id="2" data-name="72 Seasons Vinyl (2LP)" data-price="36.98">
             <div class="product-image">
-              <img src="72_Seasons_Black_LP.jpg" alt="72 Seasons Vinyl (2LP), , hi-res">
-              <div class="quick-view">ADD TO CART</div>
+              <img src="72_Seasons_Black_LP.jpg" alt="72 Seasons Vinyl (2LP)">
+              <div class="quick-view" onclick="addToCart(this)">ADD TO CART</div>
             </div>
             <div class="product-details">
               <span class="badge discount-exclusion">DISCOUNT EXCLUSION</span>
@@ -123,28 +130,32 @@
               <p class="price">$36.98</p>
             </div>
           </div>
-          <div class="product-card">
+      
+          <!-- Product 3 -->
+          <div class="product-card" data-id="3" data-name="Logo Pullover Hoodie" data-price="49.99">
             <div class="product-image">
-              <img src="Logo_Pullover_Hoodie.jpg" alt="Logo Pullover Hoodie, , hi-res">
-              <div class="quick-view">ADD TO CART</div>
+              <img src="Logo_Pullover_Hoodie.jpg" alt="Logo Pullover Hoodie">
+              <div class="quick-view" onclick="addToCart(this)">ADD TO CART</div>
             </div>
             <div class="product-details">
               <h3>Logo Pullover Hoodie</h3>
               <p class="price">$49.99</p>
             </div>
           </div>
-          <div class="product-card">
+      
+          <!-- Product 4 -->
+          <div class="product-card" data-id="4" data-name="...And Justice for All Album COVER T-Shirt" data-price="24.99">
             <div class="product-image">
-              <img src="New Justice Album Cover Tshirt.jpg" alt="...And Justice for All Album COVER T-Shirt, , hi-res">
-              <div class="quick-view">ADD TO CART</div>
-              </div>
-              <div class="product-details">
-                <h3>...And Justice for All Album COVER T-Shirt</h3>
-                <p class="price">$24.99</p>
+              <img src="New Justice Album Cover Tshirt.jpg" alt="...And Justice for All Album COVER T-Shirt">
+              <div class="quick-view" onclick="addToCart(this)">ADD TO CART</div>
             </div>
+            <div class="product-details">
+              <h3>...And Justice for All Album COVER T-Shirt</h3>
+              <p class="price">$24.99</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     <div>
       <footer class="metallica-footer">
         <div class="footer-content">
@@ -155,8 +166,8 @@
                 <a href="index.html">Home</a>
                 <a href="#">Tour</a>
                 <a href="#">Merch</a>
-                <a href="#">Photos</a>
-                <a href="#">Videos</a>
+                <a href="photo.html">Photos</a>
+                <a href="video.html">Videos</a>
                 <a href="#">Contact</a>
             </div>
             <p class="footer-copyright">

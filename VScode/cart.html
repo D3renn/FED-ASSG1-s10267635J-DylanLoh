@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="cart.css">
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <section class="hero-section1">
+        <div class="navbar1">
+        <div class="nav-item1">
+            <a href="index.html">
+              <i class="fa fa-list"></i>
+            </a>
+          </div>
+          <div class="nav-item1 logo"><img src="https://1.bp.blogspot.com/-EtGRERcqiYs/XHC6oG1DIlI/AAAAAAAASBo/6Z4_953B0gEBOkxUkdGqitjZuMMVu4V5gCLcBGAs/s1600/Mettalica%2BV1.png" alt="Metallica Logo"></div>
+          <div class="nav-item1">
+            <a href="cart.html">
+              <i class="fa fa-shopping-cart"></i>
+            </a>
+          </div>
+        </div>
+        </section>
+    <section class="cart-container">
+        <div class="cart-left">
+          <h1>CART</h1>
+          <h2>Order Summary</h2>
+          <div id="cart-items" class="cart-items">
+              <div class="item-quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+              <div class="item-remove">
+                <a href="#">Remove</a>
+              </div>
+            </div>
+    </section>
+    <div class="cart-right">
+        <h2>Proceed to Checkout</h2>
+        <form class="checkout-form">
+          <label for="email">Email Address <span>*</span></label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+  
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="checkout-option" value="account" checked>
+              Yes, I have a password.
+            </label>
+            <label>
+              <input type="radio" name="checkout-option" value="guest">
+              No, I'd like to checkout as a guest.
+            </label>
+          </div>
+  
+          <label for="password">Password <span>*</span></label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+  
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" id="remember-me">
+              Remember Me
+            </label>
+          </div>
+  
+          <button type="button" class="checkout-button">Checkout</button>
+        </form>
+      </div>
+        <footer class="metallica-footer">
+          <div class="footer-content">
+              <div class="footer-logo">
+                  <img src="https://1.bp.blogspot.com/-EtGRERcqiYs/XHC6oG1DIlI/AAAAAAAASBo/6Z4_953B0gEBOkxUkdGqitjZuMMVu4V5gCLcBGAs/s1600/Mettalica%2BV1.png" alt="Metallica Logo">
+              </div>
+              <div class="footer-nav">
+                  <a href="index.html">Home</a>
+                  <a href="#">Tour</a>
+                  <a href="#">Merch</a>
+                  <a href="#">Photos</a>
+                  <a href="#">Videos</a>
+                  <a href="#">Contact</a>
+              </div>
+              <p class="footer-copyright">
+                  &copy; 2024 Metallica. All Rights Reserved.
+              </p>
+          </div>
+      </footer>
+</body>
