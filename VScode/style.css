@@ -1,84 +1,102 @@
+/* General reset for no horizontal scrolling */
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
+
+/* Hero Section */
 .hero-section {
-    background: url("M72-2025_carousel.jpg") center center no-repeat;
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    color: white;
-    text-align: right;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
+  background: url("M72-2025_carousel.jpg") center center no-repeat;
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end; /* Align content to the bottom */
+  justify-content: flex-end; /* Align content to the right */
 }
 
+/* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 100px 0;
-    margin: 0 auto 24px auto;
-    position: absolute;
-    top: 0;
-    width: 80%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 100px 0; /* Adjust padding for desktop */
+  position: absolute; /* Keeps navbar at the top */
+  top: 0;
+  width: 100%; /* Full width navbar */
+  box-sizing: border-box;
 }
 
-.nav-item {
-    color: rgb(255, 255, 255);
-    font-size: 24px;
-  }
-  
-  .nav-item a {
-    color: white;
-    text-decoration: none;
-  }
-
+/* Logo */
 .nav-item.logo img {
-    height: 150px;
-    
+  height: 100px; /* Keep logo size consistent */
 }
 
+/* Nav Items (Links and Buttons) */
+.nav-item {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+}
 
+.nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero Section Headings */
+
+.title {
+  margin-top: 100px;
+  border-radius: 8px; /* Rounded corners */
+  max-width: 600px; /* Limit the width */
+  margin: 0 10px 10px 0px; /* Add margin for spacing from the edges */
+  text-align: right; /* Align text to the right */
+}
+
+/* Hero Section Headings */
 .hero-section h1 {
-    position: relative;
-    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
-    color: #000;
-    letter-spacing: .5px;
-    margin-top: 10px;
-    padding-right:15px;
-    color: inherit;
+  font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 30px 0 10px 0; /* Adjust spacing */
 }
 
 .hero-section p {
-    position: relative;
-    font: 700 15px / 1.05 "futura-pt-bold", sans-serif;
-    font-size: 1.5rem;
-    margin-top: 10px;
-    padding-right:10px;
+  font: 700 18px / 1.3 "futura-pt-bold", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 0 20px 0; /* Space below the paragraph */
 }
 
+/* Buttons */
 .hero-section button {
-    font: "futura-pt-bold", sans-serif;
-    background: inherit;
-    color: white;
-    padding-right: 10px;
-    margin-right: 15px;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border-color: wheat;
-    cursor: pointer;
+  font: "futura-pt-bold", sans-serif;
+  background: inherit;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px auto;
+  font-size: 10px;
+  border-radius: 2px;
+  border: 2px solid white;
+  cursor: pointer;
 }
 
 .hero-section button:hover {
-    background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
 }
 
+.navbar {
+  border: 1px solid red;
+}
+
+.nav-item.logo img {
+  border: 1px solid green;
+}
+
+.nav-item {
+  border: 1px solid blue;
+}
 
 .grid {
     width: 100%;
@@ -95,31 +113,29 @@ html, body {
     margin-top: 50px;
 }
 
-.promo-card {
+.promo-card1 {
     flex: 1; 
-    max-width: 500px; 
+    max-width: 480px; 
     padding: 10px;
+    margin-bottom: 100px;
+
 
 }
 
-.promo-card img {
+.promo-card2 {
+    flex: 1; 
+    max-width: 480px; 
+    padding: 10px;
+    margin-top: 100px; 
+}
+
+.promo-card1,
+.promo-card2 img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
-/* responsive */
-@media (max-width: 768px) {
-    .promo-section {
-        flex-direction: column; 
-        gap: 10px; 
-    }
-
-    .promo-card {
-        align-self: center; 
-        height: auto; 
-    }
-}
   /* Grid Layout */
 body {
     font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
@@ -180,7 +196,6 @@ body {
     font-weight: bold;
   }
   
-  /* Responsive design */
   .tour-dates {
     padding: 40px 20px;
   }
@@ -191,6 +206,7 @@ body {
     align-items: center;
     margin: 20px;
     margin-left: 6rem;
+    gap: 50px;
   }
   
   .section-header h2 {
@@ -239,14 +255,6 @@ body {
   
   .tour-grid-scroll::-webkit-scrollbar-track {
     background-color: #f7f7f7; /* Background of the scrollbar track */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .tour-card {
-      flex: 1; /* 1 card per row on small screens */
-      margin-right: 10px; /* Adds spacing between cards */
-    }
   }
 
   .history-section {
@@ -309,45 +317,36 @@ body {
     background-color: #f7f7f7;
     color: #000;
   }
-.merch-selection{
-    width: 100%;
-    max-width: 1276px;
-    margin: 0 auto; 
-    padding: 0;
-    box-sizing: border-box;
+/* Merch Section */
+.merch-selection {
+  display: flex; 
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
 }
 
-.merch {
-    display: flex; 
-    gap: 20px;
-    justify-content: center;
-    margin-top: 50px;
-}
+.merch-cards1 {
+  flex: 1; 
+  max-width: 480px; 
+  padding: 10px;
+  margin-bottom: 100px;
 
-.merch-cards {
-    flex: 1; 
-    max-width: 500px; 
-    padding: 10px;
 
 }
 
-.merch-cards img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.merch-cards2 {
+  flex: 1; 
+  max-width: 480px; 
+  padding: 10px;
+  margin-top: 100px; 
 }
 
-@media (max-width: 768px) {
-    .merch-selection {
-        flex-direction: column; 
-        gap: 10px; 
-    }
-
-    .merch-cards {
-        align-self: center; 
-        height: auto; 
-    }
+.merch-cards1 img, .merch-cards2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
   /* Horizontal Scroll */
 .product-grid-scroll {
     display: flex;
@@ -509,4 +508,181 @@ body {
     color: #aaa; /* Lighter gray for copyright text */
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: row; /* Keeps items horizontal for medium screens */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+  }
 
+  .nav-item.logo img {
+    height: 70px; /* Reduce logo size for medium screens */
+    margin: 0;
+  }
+
+  .nav-item {
+    font-size: 20px; /* Slightly reduce font size for nav items */
+    margin: 0 10px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    align-items: flex-end; /* Align content to the top for better visibility */
+    justify-content: flex-end; /* Keep content aligned to the right */
+    padding: 10px; /* Add padding around the hero section */
+  }
+
+  .hero-section h1 {
+    font-size: 2rem; /* Adjust heading size */
+    margin: 20px 10px;
+  }
+
+  .hero-section p {
+    font-size: 1rem; /* Reduce paragraph size */
+    margin: 10px 10px;
+  }
+
+  .hero-section button {
+    font-size: 0.9rem; /* Adjust button size */
+    padding: 8px 15px; /* Smaller padding for buttons */
+    margin: 10px 10px;
+  }
+
+  /* Promo Section */
+  .promo-section {
+    align-content: center; /* Center-align promo cards */
+    flex-direction: column; /* Stack promo cards vertically */
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .promo-card1,
+  .promo-card2 {
+    width: 100%; /* Full width for promo cards */
+    margin: 0 auto; /* Center-align the cards */
+  }
+
+  /* Merch Section */
+  .merch-selection {
+    align-content: center; /* Center-align promo cards */
+    flex-direction: column; /* Stack promo cards vertically */
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .merch-cards1,
+  .merch-cards2 {
+    width: 100%; /* Full width for promo cards */
+    margin: 0 auto; /* Center-align the cards */
+  }
+
+  /* Footer Adjustments */
+  .metallica-footer .footer-logo img {
+    max-width: 150px; /* Reduce footer logo size */
+  }
+
+  .metallica-footer .footer-nav {
+    flex-direction: row; /* Stack footer links vertically */
+    gap: 10px;
+    align-items: center;
+  }
+
+  .metallica-footer .footer-nav a {
+    font-size: 14px; /* Smaller font for links */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: row; /* Keeps items horizontal for medium screens */
+    justify-content: space-between;
+    align-items: center;/* Center-align navbar items */
+    padding: 10px;
+    width: 100%; /* Full width for navbar */
+  }
+
+  .nav-item.logo img {
+    height: 50px; /* Smaller logo size */
+    margin: 10px 0;
+  }
+
+  .nav-item {
+    font-size: 18px; /* Smaller font size */
+    margin: 5px 0;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align text and button */
+    text-align: center; /* Center-align text */
+    padding: 10px; /* Add padding for spacing */
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem; /* Smaller heading size */
+    margin: 15px 0;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+    margin: 10px 0;
+  }
+
+  .hero-section button {
+    font-size: 0.8rem; /* Smaller button font size */
+    padding: 5px 10px; /* Smaller button padding */
+    margin: 10px auto;
+  }
+
+  /* Promo Section */
+  .promo-section {
+    align-content: center; /* Center-align promo cards */
+    flex-direction: column; /* Stack promo cards vertically */
+    gap: 10px; /* Reduce spacing between promo cards */
+    padding: 0 10px; /* Add padding around the section */
+  }
+
+  .promo-card1,
+  .promo-card2 {
+
+    align-content: center; /* Center-align promo cards */
+    flex-direction: column; /* Stack promo cards vertically */
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  /* Merch Section */
+  .merch {
+    flex-direction: column; /* Stack merch items vertically */
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .merch-cards1,
+  .merch-cards2 {
+    align-content: center; /* Center-align promo cards */
+    flex-direction: column; /* Stack promo cards vertically */
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  /* Footer Adjustments */
+  .metallica-footer .footer-logo img {
+    max-width: 100px; /* Reduce footer logo size */
+  }
+
+  .metallica-footer .footer-nav {
+    flex-direction: column; /* Stack links vertically */
+    gap: 5px; /* Reduce spacing between links */
+  }
+
+  .metallica-footer .footer-nav a {
+    font-size: 12px; /* Smaller font size for links */
+  }
+}
