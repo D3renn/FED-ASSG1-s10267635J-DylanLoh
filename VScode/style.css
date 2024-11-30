@@ -590,15 +590,15 @@ body {
   }
 
   .nav-item.logo img {
-    height: 50px; /* Smaller logo size */
+    height: 90px; /* Smaller logo size */
     margin: 10px 0;
   }
 
   .nav-item {
-    font-size: 18px; /* Smaller font size */
-    margin: 5px 0;
+    align-items: center; /* Align items vertically */
+    font-size: 14px; /* Smaller font size */
+    padding:0 20px 0 20px
   }
-
   /* Hero Section */
   .hero-section {
     flex-direction: column; /* Stack content vertically */

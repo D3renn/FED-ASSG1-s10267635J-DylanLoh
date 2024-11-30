@@ -258,20 +258,19 @@ html, body {
         font-size: 1.5rem;
     }
 
-    /* Footer Adjustments */
-    .metallica-footer .footer-logo img {
-        max-width: 150px; /* Reduce footer logo size */
-      }
-    
-      .metallica-footer .footer-nav {
-        flex-direction: row; /* Stack footer links vertically */
-        gap: 10px;
-        align-items: center;
-      }
-    
-      .metallica-footer .footer-nav a {
-        font-size: 14px; /* Smaller font for links */
-      }
+  /* Footer Adjustments */
+  .metallica-footer .footer-logo img {
+    max-width: 100px; /* Reduce footer logo size */
+  }
+
+  .metallica-footer .footer-nav {
+    flex-direction: row; /* Stack links vertically */
+    gap: 5px; /* Reduce spacing between links */
+  }
+
+  .metallica-footer .footer-nav a {
+    font-size: 12px; /* Smaller font size for links */
+  }
 }
 
 

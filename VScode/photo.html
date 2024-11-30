@@ -3,70 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <title>Band Website</title>
-  <link href="photo.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script> 
+  <title>Photos | Metallica</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="Normalize.css" rel="stylesheet">
+  <link href="photo.css" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <section class="hero-section2">
-        <div class="navbar2">
-        <div class="nav-item2">
-            <a href="list.html">
-              <i class="fa fa-list"></i>
-            </a>
-          </div>
-          <div class="nav-item2 logo"><img src="https://1.bp.blogspot.com/-EtGRERcqiYs/XHC6oG1DIlI/AAAAAAAASBo/6Z4_953B0gEBOkxUkdGqitjZuMMVu4V5gCLcBGAs/s1600/Mettalica%2BV1.png" alt="Metallica Logo"></div>
-          <div class="nav-item2">
-            <a href="cart.html">
-              <i class="fa fa-shopping-cart"></i>
-            </a>
-          </div>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <nav class="navbar">
+      <a href="list.html" class="nav-item"><i class="fa fa-list"></i></a>
+      <div class="nav-item logo">
+        <img src="Mettalica V1.jpg" alt="Metallica Logo">
       </div>
-        <div class="title2">
-            <h1>Photo</h1>
-        </section>
+      <a href="cart.html" class="nav-item"><i class="fa fa-shopping-cart"></i></a>
+    </nav>
+    <div class="title">
+      <h1>Photos</h1>
+    </div>
+  </section>
 
-        <section class="photo-gallery">
-            <h1>Explore Photos...</h1>
-            <div class="filter-bar">
-                <nav class="categories">
-                    <button class="filter-button active" data-category="all">All</button>
-                    <button class="filter-button" data-category="live">Live Photos</button>
-                    <button class="filter-button" data-category="band">Band Photos</button>
-                    <button class="filter-button" data-category="behind">Behind the Scenes</button>
-                    <button class="filter-button" data-category="exclusive">Fifth Member Exclusive</button>
-                </nav>
-                <div class="sort-bar">
-                    <label for="sort">Sort By:</label>
-                    <select id="sort">
-                        <option value="newest">Newest to Oldest</option>
-                        <option value="oldest">Oldest to Newest</option>
-                    </select>
-                </div>
-            </div>
-            <div class="photo-grid" id="photoGrid">
-            </div>
-        </section>
-        <div>
-            <footer class="metallica-footer">
-              <div class="footer-content">
-                  <div class="footer-logo">
-                      <img src="https://1.bp.blogspot.com/-EtGRERcqiYs/XHC6oG1DIlI/AAAAAAAASBo/6Z4_953B0gEBOkxUkdGqitjZuMMVu4V5gCLcBGAs/s1600/Mettalica%2BV1.png" alt="Metallica Logo">
-                  </div>
-                  <div class="footer-nav">
-                      <a href="index.html">Home</a>
-                      <a href="#">Tour</a>
-                      <a href="#">Merch</a>
-                      <a href="#">Photos</a>
-                      <a href="#">Videos</a>
-                      <a href="#">Contact</a>
-                  </div>
-                  <p class="footer-copyright">
-                      &copy; 2024 Metallica. All Rights Reserved.
-                  </p>
-              </div>
-          </footer>
-        </div>
+  <!-- Photo Gallery Section -->
+  <section class="photo-gallery">
+    <h1>Explore Photos...</h1>
+    <div class="filter-bar">
+      <nav class="categories">
+        <button class="filter-button active" data-category="all">All</button>
+        <button class="filter-button" data-category="live">Live Photos</button>
+        <button class="filter-button" data-category="band">Band Photos</button>
+        <button class="filter-button" data-category="behind">Behind the Scenes</button>
+        <button class="filter-button" data-category="exclusive">Fifth Member Exclusive</button>
+      </nav>
+      <div class="sort-bar">
+        <label for="sort">Sort By:</label>
+        <select id="sort">
+          <option value="newest">Newest to Oldest</option>
+          <option value="oldest">Oldest to Newest</option>
+        </select>
+      </div>
+    </div>
+    <div class="photo-grid" id="photoGrid"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="metallica-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="https://1.bp.blogspot.com/-EtGRERcqiYs/XHC6oG1DIlI/AAAAAAAASBo/6Z4_953B0gEBOkxUkdGqitjZuMMVu4V5gCLcBGAs/s1600/Mettalica%2BV1.png" alt="Metallica Logo">
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="#">Tour</a>
+        <a href="#">Merch</a>
+        <a href="#">Photos</a>
+        <a href="#">Videos</a>
+        <a href="#">Contact</a>
+      </div>
+      <p>&copy; 2024 Metallica. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

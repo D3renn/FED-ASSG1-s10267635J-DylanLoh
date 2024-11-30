@@ -1,11 +1,23 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     overflow-x: hidden;
 }
 
-.navbar2 {
+/* Hero Section */
+.hero-section {
+    background: url("media_hero.jpg") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,96 +25,74 @@ body {
     margin: 0 auto 24px auto;
     position: absolute;
     top: 0;
-    width: 80%; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.nav-item2 {
+.nav-item.logo img {
+    height: 100px;
+}
+
+.nav-item {
     color: rgb(255, 255, 255);
     font-size: 24px;
-  }
+}
   
-  .nav-item2 a {
+.nav-item a {
     color: white;
     text-decoration: none;
-  }
-
-.nav-item2.logo img {
-    height: 150px;
-    
 }
 
-.hero-section2 {
-    position: relative;
-    height: 100vh;
-    background: url("https://cdn.media.amplience.net/i/metallica/media_hero?fmt=auto&amp;w=auto") center center/cover no-repeat;
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    color: white;
-    text-align: center; /* Center text alignment */
-    margin: 0;
-    padding: 0;
-}
-
-.hero-section2 h1 {
-    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
-    color: #fff; /* Ensure the text color contrasts with the background */
-    letter-spacing: 0.5px;
-    margin: 0; /* Remove extra margin */
-    padding: 0; /* Remove padding */
-}
-
-.video-gallery h1 {
+/* Hero Section Title */
+.title h1 {
     font: 800 36px / 1.2 "Arial", sans-serif;
-    margin-bottom: 10px;
     text-transform: uppercase;
-    color: #000;
-    text-align: left;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
-    margin: 20px;
-  }
-  
-  .video-grid {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.video-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
     margin-top: 20px;
-    justify-items: center;
-  }
-  
-  .video-card {
-    width: 100%;
-    max-width: 500px;
+    justify-items: center; /* Center items horizontally */
+    margin-bottom: 50px;
+}
+
+.video-card {
+    width: 100%; /* Make cards responsive to grid */
+    max-width: 500px; /* Limit max width of cards */
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-  }
-  
-  .video-card img {
+}
+
+.video-card img {
     width: 100%;
     display: block;
-  }
-  
-  .video-card .video-info {
+}
+
+.video-card .video-info {
     padding: 10px;
-  }
-  
-  .video-card .video-info h3 {
+}
+
+.video-card .video-info h3 {
     margin: 0;
     font-size: 1rem;
     font-weight: bold;
-  }
-  
-  .video-card .video-info p {
+}
+
+.video-card .video-info p {
     margin: 5px 0 0;
     font-size: 0.9rem;
     color: #555;
-  }
+}
 
-  .video-gallery h1 {
+.video-gallery h1 {
     font: 800 36px / 1.2 "futura-pt-bold", sans-serif; /* Bold and larger font */
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -110,7 +100,7 @@ body {
     text-align: left; /* Align text to the left */
     border-bottom: 2px solid #ccc; /* Add a bottom border for separation */
     padding-bottom: 10px;
-    margin: 20px;
+    margin: 20px 50px 20px 50px;
 }
 
 .filter-bar {
@@ -119,12 +109,14 @@ body {
     align-items: center;
     border-bottom: 1px solid #ccc; /* Add a border below for separation */
     padding-bottom: 10px;
-    margin: 20px;
+    margin: 20px 50px 20px 50px;
 }
 
 .categories {
     display: flex;
     gap: 20px; /* Add spacing between buttons */
+    font: 800 36px / 1.2 "futura-pt-bold", sans-serif; /* Bold and larger font */
+    text-align: center;
 }
 
 .filter-button {
@@ -146,8 +138,8 @@ body {
 }
 
 .filter-button.active {
-    color: #000; /* Change color to black for active button */
-    border-bottom: 2px solid #000; /* Permanent underline for active button */
+    color: #000;
+    border-bottom: 2px solid #000;
 }
 
 .sort-bar {
@@ -215,10 +207,18 @@ body {
     color: #aaa; /* Lighter gray for copyright text */
 }
 
-
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+
+    .video-card {
+        max-width: 90%; /* Ensure cards don't take too much width */
+        margin: 0 auto; /* Center the cards */
+    }
+
     .filter-bar {
         flex-direction: column;
         align-items: flex-start; /* Align items to the left on smaller screens */
@@ -226,5 +226,101 @@ body {
 
     .sort-bar {
         margin-top: 10px; /* Add space for the sort dropdown */
+    }
+
+    .navbar {
+        flex-direction: row; /* Keeps items horizontal for medium screens */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    
+    .nav-item.logo img {
+        margin: 0;
+    }
+    
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    /* Footer Adjustments */
+    .metallica-footer .footer-logo img {
+        max-width: 150px; /* Reduce footer logo size */
+    }
+
+    .metallica-footer .footer-nav {
+        flex-direction: row; /* Stack footer links vertically */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .metallica-footer .footer-nav a {
+        font-size: 14px; /* Smaller font for links */
+    }
+}
+
+/* Media Query for 480px and below */
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+        gap: 10px; /* Reduce gap further */
+    }
+
+    .video-card {
+        max-width: 95%; /* Slightly narrower for very small screens */
+        margin: 0 auto; /* Center the cards */
+    }
+    .video-gallery h1 {
+        font-size: 1.5rem;
+    }
+    .filter-bar {
+        flex-direction: column; /* Stack filter bar vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+    .navbar {
+        flex-direction: row; /* Keeps items horizontal for medium screens */
+        justify-content: space-between;
+        align-items: center;/* Center-align navbar items */
+        padding: 10px;
+        width: 100%; /* Full width for navbar */
+    }
+
+    .categories {
+        display: flex;
+        flex-wrap: wrap; /* Allow buttons to wrap */
+        justify-content: flex-start; /* Align buttons to the left */
+        gap: 10px; /* Space between buttons */
+    }
+    .categories button {
+        font-size: 14px; /* Smaller font size for buttons */
+        padding: 5px 10px; /* Smaller padding for buttons */
+        margin-bottom: 5px; /* Add some space between buttons */
+        align-content: center;
+    }
+    
+    .nav-item.logo img {
+        height: 90px; /* Smaller logo size */
+        margin: 10px 0;
+    }
+    
+    .nav-item {
+        align-items: center; /* Align items vertically */
+        font-size: 14px; /* Smaller font size */
+        padding: 0 20px 0 20px;
+    }
+
+    /* Footer Adjustments */
+    .metallica-footer .footer-logo img {
+        max-width: 100px; /* Reduce footer logo size */
+    }
+
+    .metallica-footer .footer-nav {
+        flex-direction: row; /* Stack links vertically */
+        gap: 5px; /* Reduce spacing between links */
+    }
+
+    .metallica-footer .footer-nav a {
+        font-size: 12px; /* Smaller font size for links */
     }
 }

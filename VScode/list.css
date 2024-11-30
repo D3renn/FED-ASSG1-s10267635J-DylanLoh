@@ -237,40 +237,42 @@ html, body {
 @media (max-width: 480px) {
     /* Navbar */
     .navbar1 {
-      flex-direction: row; /* Keeps items horizontal for medium screens */
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      width: 100%;
-    }
-  
-    .nav-item1.logo img {
-      margin: 0;
-    }
-  
-    .nav-item1 {
-      margin: 0 10px;
-    }
-  
-    /* Hero Section */
-    .hero-section1 {
-      align-items: flex-end; /* Align content to the top for better visibility */
-      justify-content: flex-end; /* Keep content aligned to the right */
-      padding: 10px; /* Add padding around the hero section */
-    }
+        flex-direction: row; /* Keeps items horizontal for medium screens */
+        justify-content: space-between;
+        align-items: center;/* Center-align navbar items */
+        padding: 10px;
+        width: 100%; /* Full width for navbar */
+      }
+    
+      .nav-item1.logo img {
+        height: 90px; /* Smaller logo size */
+        margin: 10px 0;
+      }
+    
+      .nav-item1 {
+        align-items: center; /* Align items vertically */
+        font-size: 14px; /* Smaller font size */
+        padding:0 20px 0 20px
+      }
+      /* Hero Section */
+      .hero-section1 {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align text and button */
+        text-align: center; /* Center-align text */
+        padding: 10px; /* Add padding for spacing */
+      }
 
-    /* Footer Adjustments */
+  /* Footer Adjustments */
   .metallica-footer .footer-logo img {
-    max-width: 150px; /* Reduce footer logo size */
+    max-width: 100px; /* Reduce footer logo size */
   }
 
   .metallica-footer .footer-nav {
-    flex-direction: row; /* Stack footer links vertically */
-    gap: 10px;
-    align-items: center;
+    flex-direction: row; /* Stack links vertically */
+    gap: 5px; /* Reduce spacing between links */
   }
 
   .metallica-footer .footer-nav a {
-    font-size: 14px; /* Smaller font for links */
+    font-size: 12px; /* Smaller font size for links */
   }
 }
