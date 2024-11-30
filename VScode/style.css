@@ -85,19 +85,6 @@ html, body {
 .hero-section button:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-
-.navbar {
-  border: 1px solid red;
-}
-
-.nav-item.logo img {
-  border: 1px solid green;
-}
-
-.nav-item {
-  border: 1px solid blue;
-}
-
 .grid {
     width: 100%;
     max-width: 1276px;
@@ -520,12 +507,10 @@ body {
   }
 
   .nav-item.logo img {
-    height: 70px; /* Reduce logo size for medium screens */
     margin: 0;
   }
 
   .nav-item {
-    font-size: 20px; /* Slightly reduce font size for nav items */
     margin: 0 10px;
   }
 
@@ -678,7 +663,7 @@ body {
   }
 
   .metallica-footer .footer-nav {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: row; /* Stack links vertically */
     gap: 5px; /* Reduce spacing between links */
   }
 

@@ -1,22 +1,40 @@
-body {
-    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
+/* General reset for no horizontal scrolling */
+html, body {
+    font: 600 20px / 1.0 "futura-pt-bold", sans-serif;
     margin: 0;
     padding: 0;
-    color: #000;
     overflow-x: hidden;
   }
+  
+  /* Hero Section1 */
+  .hero-section1 {
+    position: relative;
+    background-size: cover;
+    height: 20vh; /* Adjust height */
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom */
+    justify-content: flex-end; /* Align content to the right */
+  }
+  
+  /* Navbar */
   .navbar1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 100px 0;
-    margin: 0 auto 24px auto;
-    position: absolute;
+    padding: 22px 100px 0; /* Adjust padding for desktop */
+    position: absolute; /* Keeps navbar at the top */
     top: 0;
-    width: 80%; 
-}
+    width: 100%; /* Full width navbar */
+    box-sizing: border-box;
+  }
 
-.nav-item1 {
+  /* Logo */
+.nav-item1.logo img {
+    height: 100px; /* Keep logo size consistent */
+  }
+  
+  /* Nav Items (Links and Buttons) */
+  .nav-item1 {
     color: rgb(0, 0, 0);
     font-size: 24px;
   }
@@ -26,32 +44,32 @@ body {
     text-decoration: none;
   }
 
-.nav-item1.logo img {
-    height: 150px;
-    
-}
-
-.hero-section1 {
-    position: relative;
-    height: 25vh;  
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    text-align: right;
-    margin: 0;
-    padding: 0;
-}
-
 /* Search Bar */
 .nav-item-search {
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 100px 60px 20px;
-    margin-top: 10px;
-    border-bottom: 1px solid #ddd;
-    text-decoration: none;
+    margin-top: 20px; /* Add spacing from the top */
+    padding: 20px;
+    max-width: 100px; /* Limit width to prevent overflow */
     letter-spacing: 1.0px;
+    font-family: "Arial", sans-serif; /* Use a clean font */
 
+}
+
+.nav-item-search input {
+    flex: 1; /* Makes the input take up available space */
+    padding: 10px 15px; /* Add padding for a clean look */
+    border: none; /* Remove border */
+    border-bottom: 2px solid black; /* Add black bottom border */
+    font-size: 16px; /* Adjust font size */
+    color: black; /* Text color */
+    background: none; /* Transparent background */
+    outline: none; /* Remove input outline */
+    font-family: "Arial", sans-serif; /* Consistent font */
+    letter-spacing: 1px; /* Adjust letter spacing */
+    margin-right: 10px; /* Space between input and search icon */
+    width: 200px;
 }
 
 .search-bar input {
@@ -70,7 +88,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
-    margin-top: 50px; /* Added space between the grid and the search bar */
+    margin-top: 10px; /* Added space between the grid and the search bar */
 }
 
 .grid-item {
@@ -99,7 +117,7 @@ body {
     color: #000;
     text-decoration: none;
 }
-/* Dropdown     Styles */
+/* Dropdown Styles */
 .dropdown {
     position: absolute;
     background: #fff;
@@ -110,6 +128,7 @@ body {
     overflow-y: auto; /* Add scroll if needed */
     display: none; /* Initially hidden */
     z-index: 1000;
+    max-width: 400px;
 }
 
 .dropdown-item {
@@ -122,40 +141,6 @@ body {
 
 .dropdown-item:hover {
     background-color: #f0f0f0;
-}
-/* Booking Section */
-.booking-section {  
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.booking-container {
-    display: inline-block;
-    background: #acacac;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.booking-container h4 {
-    font: 800 45px / 1.05 "futura-pt-bold", sans-serif;
-    margin-bottom: 5px;
-    font-size: 4rem;
-}
-
-.booking-container p {
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.booking-container button {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
 }
 
 .booking-container button:hover {
@@ -206,3 +191,86 @@ body {
     color: #aaa; /* Lighter gray for copyright text */
 }
 /* Responsive Design */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar1 {
+      flex-direction: row; /* Keeps items horizontal for medium screens */
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      width: 100%;
+    }
+  
+    .nav-item1.logo img {
+      margin: 0;
+    }
+  
+    .nav-item1 {
+      margin: 0 10px;
+    }
+  
+    /* Hero Section */
+    .hero-section1 {
+      align-items: flex-end; /* Align content to the top for better visibility */
+      justify-content: flex-end; /* Keep content aligned to the right */
+      padding: 10px; /* Add padding around the hero section */
+    }
+
+    /* Footer Adjustments */
+  .metallica-footer .footer-logo img {
+    max-width: 150px; /* Reduce footer logo size */
+  }
+
+  .metallica-footer .footer-nav {
+    flex-direction: row; /* Stack footer links vertically */
+    gap: 10px;
+    align-items: center;
+  }
+
+  .metallica-footer .footer-nav a {
+    font-size: 14px; /* Smaller font for links */
+  }
+
+
+}
+
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar1 {
+      flex-direction: row; /* Keeps items horizontal for medium screens */
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      width: 100%;
+    }
+  
+    .nav-item1.logo img {
+      margin: 0;
+    }
+  
+    .nav-item1 {
+      margin: 0 10px;
+    }
+  
+    /* Hero Section */
+    .hero-section1 {
+      align-items: flex-end; /* Align content to the top for better visibility */
+      justify-content: flex-end; /* Keep content aligned to the right */
+      padding: 10px; /* Add padding around the hero section */
+    }
+
+    /* Footer Adjustments */
+  .metallica-footer .footer-logo img {
+    max-width: 150px; /* Reduce footer logo size */
+  }
+
+  .metallica-footer .footer-nav {
+    flex-direction: row; /* Stack footer links vertically */
+    gap: 10px;
+    align-items: center;
+  }
+
+  .metallica-footer .footer-nav a {
+    font-size: 14px; /* Smaller font for links */
+  }
+}
