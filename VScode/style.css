@@ -492,7 +492,6 @@ body {
     margin-top: 20px;
     color: #aaa; /* Lighter gray for copyright text */
 }
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   /* Navbar */
