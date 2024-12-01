@@ -40,4 +40,7 @@ CSS
 HTML
 Javascript
 
+references: 
+chatgpt, metallica.com
+
 
