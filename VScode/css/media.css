@@ -7,7 +7,7 @@ html, body {
 
 /* Hero Section */
 .hero-section {
-    background: url("media_hero.jpg") center center no-repeat;
+    background: url("images/media_hero.jpg") center center no-repeat;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -99,11 +99,11 @@ html, body {
 }
 
 .photo-card {
-    background-image: url("photos_card.jpg");
+    background-image: url("images/photos_card.jpg");
 }
 
 .video-card {
-    background-image: url("videos_card.jpg");
+    background-image: url("images/videos_card.jpg");
     margin-top: 50px;
 }
 

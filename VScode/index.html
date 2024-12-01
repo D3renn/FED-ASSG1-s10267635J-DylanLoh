@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <title>Band Website</title>
-  <link href="Normalize.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" />
-  <script src="script.js"></script>
+  <link href="css/Normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="javascript/script.js"></script>
 </head>
 <body>
   <section class="hero-section">
@@ -18,7 +18,7 @@
         </a>
       </div>
       <div class="nav-item logo">
-        <img src="VScode/images/Mettalica V1.jpg" alt="Metallica Logo">
+        <img src="images/Mettalica V1.jpg" alt="Metallica Logo">
       </div>
       <div class="nav-item">
         <a href="cart.html">
@@ -35,8 +35,8 @@
   
   <section class="grid">
     <div class="promo-section">
-      <img src="FAN-CLUB_1600x1600.jpg" class="promo-card1" alt="Join Our Free Fan Club to Become a Fifth Member" loading="lazy">
-      <img src="Live_Metallica_Promo_Square.jpg" class="promo-card2" alt="Listen to Live Metallica" loading="lazy">
+      <img src="images/FAN-CLUB_1600x1600.jpg" class="promo-card1" alt="Join Our Free Fan Club to Become a Fifth Member" loading="lazy">
+      <img src="images/Live_Metallica_Promo_Square.jpg" class="promo-card2" alt="Listen to Live Metallica" loading="lazy">
     </div>
   </section>
   
@@ -101,8 +101,8 @@
   
   <section class="grid">
     <div class="merch-selection">
-      <img src="2024-10-21-Holiday-Launch-Store-Banner.jpg" class="merch-cards1" alt="Holiday 2024 Merch" loading="lazy">
-      <img src="2024-11-18-Classic-Tees-Sale-Store-Banner.jpg" class="merch-cards2" alt="On sale this week!" loading="lazy">
+      <img src="images/2024-10-21-Holiday-Launch-Store-Banner.jpg" class="merch-cards1" alt="Holiday 2024 Merch" loading="lazy">
+      <img src="images/2024-11-18-Classic-Tees-Sale-Store-Banner.jpg" class="merch-cards2" alt="On sale this week!" loading="lazy">
     </div>
   </section>
       <section class="merch-store">
@@ -114,7 +114,7 @@
           <!-- Product 1 -->
           <div class="product-card" data-id="1" data-name="Ride the Lightning T-Shirt" data-price="27.99">
             <div class="product-image">
-              <img src="RTL_Tshirt.jpg" alt="Ride The Lightning T-Shirt">
+              <img src="images/RTL_Tshirt.jpg" alt="Ride The Lightning T-Shirt">
               <div class="quick-view" onclick="addToCart(this)">ADD TO CART</div>
             </div>
             <div class="product-details">
@@ -127,7 +127,7 @@
           <!-- Product 2 -->
           <div class="product-card" data-id="2" data-name="72 Seasons Vinyl (2LP)" data-price="36.98">
             <div class="product-image">
-              <img src="72_Seasons_Black_LP.jpg" alt="72 Seasons Vinyl (2LP)">
+              <img src="images/72_Seasons_Black_LP.jpg" alt="72 Seasons Vinyl (2LP)">
               <div class="quick-view" onclick="addToCart(this)">ADD TO CART</div>
             </div>
             <div class="product-details">
@@ -140,7 +140,7 @@
           <!-- Product 3 -->
           <div class="product-card" data-id="3" data-name="Logo Pullover Hoodie" data-price="49.99">
             <div class="product-image">
-              <img src="Logo_Pullover_Hoodie.jpg" alt="Logo Pullover Hoodie">
+              <img src="images/Logo_Pullover_Hoodie.jpg" alt="Logo Pullover Hoodie">
               <div class="quick-view" onclick="addToCart(this)">ADD TO CART</div>
             </div>
             <div class="product-details">
@@ -152,7 +152,7 @@
           <!-- Product 4 -->
           <div class="product-card" data-id="4" data-name="...And Justice for All Album COVER T-Shirt" data-price="24.99">
             <div class="product-image">
-              <img src="New Justice Album Cover Tshirt.jpg" alt="...And Justice for All Album COVER T-Shirt">
+              <img src="images/New Justice Album Cover Tshirt.jpg" alt="...And Justice for All Album COVER T-Shirt">
               <div class="quick-view" onclick="addToCart(this)">ADD TO CART</div>
             </div>
             <div class="product-details">
@@ -163,24 +163,23 @@
         </div>
       </section>
     <div>
-      <footer class="metallica-footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="https://1.bp.blogspot.com/-EtGRERcqiYs/XHC6oG1DIlI/AAAAAAAASBo/6Z4_953B0gEBOkxUkdGqitjZuMMVu4V5gCLcBGAs/s1600/Mettalica%2BV1.png" alt="Metallica Logo">
-            </div>
-            <div class="footer-nav">
-                <a href="index.html">Home</a>
-                <a href="#">Tour</a>
-                <a href="#">Merch</a>
-                <a href="photo.html">Photos</a>
-                <a href="video.html">Videos</a>
-                <a href="#">Contact</a>
-            </div>
-            <p class="footer-copyright">
-                &copy; 2024 Metallica. All Rights Reserved.
-            </p>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="metallica-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/Mettalica V1.jpg" alt="Metallica Logo">
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="#">Tour</a>
+        <a href="#">Merch</a>
+        <a href="photo.html">Photos</a>
+        <a href="video.html">Videos</a>
+        <a href="#">Contact</a>
+      </div>
+      <p>&copy; 2024 Metallica. All Rights Reserved.</p>
+    </div>
+  </footer>
   </div>
 </body>
 </html>

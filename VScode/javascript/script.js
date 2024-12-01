@@ -37,35 +37,35 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "live",
       date: "2024-09-29",
       location: "Mexico City, Mexico",
-      image: "https://via.placeholder.com/300x200?text=Live+Photo+1",
+      image: "images/2024-09sep29_social.jpg",
     },
     {
       id: 2,
       category: "live",
       date: "2024-09-27",
       location: "Mexico City, Mexico",
-      image: "https://via.placeholder.com/300x200?text=Live+Photo+2",
+      image: "images/2024-09sep27_social.jpg",
     },
     {
       id: 3,
       category: "band",
       date: "2024-09-25",
       location: "New York, USA",
-      image: "https://via.placeholder.com/300x200?text=Band+Photo",
+      image: "images/2024-09sep22_social.jpg",
     },
     {
       id: 4,
       category: "behind",
       date: "2024-09-20",
       location: "Los Angeles, USA",
-      image: "https://via.placeholder.com/300x200?text=Behind+Scenes",
+      image: "images/2023-05may25_social.jpg",
     },
     {
       id: 5,
       category: "exclusive",
       date: "2024-09-15",
       location: "Paris, France",
-      image: "https://via.placeholder.com/300x200?text=Exclusive",
+      image: "images/2023-01jan09_social.jpg",
     },
   ];
 
@@ -128,35 +128,40 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "live",
       date: "2024-09-29",
       title: "Live in Mexico City",
-      thumbnail: "https://via.placeholder.com/300x200?text=Live+Performance+1",
+      thumbnail: "images/2024-05may26_social.jpg",
+      url: "https://youtu.be/9qn2wOX_3yg?list=PLJvQXRgtxlukmDarotT2ZFhjAVYdQHSka",
     },
     {
       id: 2,
       category: "interview",
       date: "2024-09-25",
       title: "Exclusive Interview with James",
-      thumbnail: "https://via.placeholder.com/300x200?text=Interview",
+      thumbnail: "images/the-videos_playlist.jpg",
+      url: "https://youtu.be/6CzJAdPzNvQ?list=PLJvQXRgtxlulzHS5D8dXaVpy0g7R5TYPn",
     },
     {
       id: 3,
       category: "behind",
       date: "2024-09-20",
       title: "Behind the Scenes: M72 Tour",
-      thumbnail: "https://via.placeholder.com/300x200?text=Behind+the+Scenes",
+      thumbnail: "images/2023-05may25_social.jpg",
+      url: "https://youtu.be/W1nFLOvyDRU?list=PLJvQXRgtxlulvBZ6oFu0kqPEEz1VpVXJr",
     },
     {
       id: 4,
       category: "live",
       date: "2024-09-15",
       title: "Live in Paris",
-      thumbnail: "https://via.placeholder.com/300x200?text=Live+Performance+2",
+      thumbnail: "images/2023-04apr10_lux-aeterna-jimmy-kimmel-live.jpg",
+      url: "https://youtu.be/1kAZoIqzNZM?list=PLJvQXRgtxlukjxKt_p5MWwBlQm9LPA5ri",
     },
     {
       id: 5,
       category: "interview",
       date: "2024-09-10",
       title: "Exclusive Interview with Sarah",
-      thumbnail: "https://via.placeholder.com/300x200?text=Interview",
+      thumbnail: "images/releases_social.jpg",
+      url: "https://youtu.be/1kAZoIqzNZM?list=PLJvQXRgtxlukjxKt_p5MWwBlQm9LPA5ri",
     },
   ];
 
@@ -168,13 +173,13 @@ document.addEventListener("DOMContentLoaded", () => {
     videoGrid.innerHTML = "";
     filteredVideos.forEach((video) => {
       const videoCard = `
-        <div class="video-card">
+        <a href="${video.url}" target="_blank" class="video-card"> <!-- Add link to YouTube -->
           <img src="${video.thumbnail}" alt="${video.title}">
           <div class="video-info">
             <p>${video.date}</p>
             <h3>${video.title}</h3>
           </div>
-        </div>
+        </a>
       `;
       videoGrid.innerHTML += videoCard;
     });
@@ -211,32 +216,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderVideos(videos);
 });
-
-// Function to add a product to the cart
-function addToCart(element) {
-  const productCard = element.closest(".product-card");
-  const productId = productCard.dataset.id;
-  const productName = productCard.dataset.name;
-  const productPrice = parseFloat(productCard.dataset.price);
-  const productImage = productCard.querySelector("img").src;
-
-  const cartItem = {
-    id: productId,
-    name: productName,
-    price: productPrice,
-    quantity: 1,
-    image: productImage,
-  };
-
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  const existingItem = cart.find((item) => item.id === productId);
-  if (existingItem) {
-    existingItem.quantity += 1;
-  } else {
-    cart.push(cartItem);
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert(`${productName} has been added to your cart!`);
-}
